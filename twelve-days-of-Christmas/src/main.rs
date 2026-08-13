@@ -14,24 +14,27 @@ fn main() {
     let twelve = "Twelve drummers drumming,";
 
     //Days array
-    let a = [format!("{} {}", { two }, { one })];
-    for line in &a {
-        println!("{}", line);
-    }
+    let a = [
+        format!("{}", one),
+        format!("{} {}", two, one),
+        format!("{} {} {}", three, two, one),
+    ];
+    println!("{}", a[0]);
     //"index" is the index number for "day"
     let mut index: u32 = 0;
 
-    loop {
-        index += 1;
+    //    loop {
+    //        index += 1;
 
-        if index > 1 {
-            let one = "And a partridge in a pear tree.";
-        }
+    //        if index > 1 {
+    //            let one = "And a partridge in a pear tree.";
+    //        }
 
-        if index == 12 {
-            let one = "And a partridge in a pear tree!";
-        }
-    }
+    //        if index == 12 {
+    //            let one = "And a partridge in a pear tree!";
+    //        }
+
+    //    }
 }
 
 //note to self: learn how to add "new line" for each sentence (e.g. one{new_line}two{new_line}three
