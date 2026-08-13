@@ -1,6 +1,5 @@
 fn main() {
     //List of 12 days
-    let mut one = "a partridge in a pear tree.";
     let two = "Two turtle doves,";
     let three = "Three French hens,";
     let four = "Four calling birds,";
@@ -13,28 +12,20 @@ fn main() {
     let eleven = "Eleven pipers piping,";
     let twelve = "Twelve drummers drumming,";
 
-    //Days array
-    let a = [
-        format!("{}", one),
-        format!("{} {}", two, one),
-        format!("{} {} {}", three, two, one),
-    ];
-    println!("{}", a[0]);
     //"index" is the index number for "day"
-    let mut index: u32 = 0;
+    let mut index: usize = 0;
 
-    //    loop {
-    //        index += 1;
+    loop {
+        let one = if index == 11 {
+            "And a partridge in a pear tree!"
+        } else if index > 0 {
+            "And a partridge in a pear tree."
+        } else {
+            "a partridge in a pear tree."
+        };
 
-    //        if index > 1 {
-    //            let one = "And a partridge in a pear tree.";
-    //        }
-
-    //        if index == 12 {
-    //            let one = "And a partridge in a pear tree!";
-    //        }
-
-    //    }
+        index += 1;
+    }
 }
 
 //note to self: learn how to add "new line" for each sentence (e.g. one{new_line}two{new_line}three
