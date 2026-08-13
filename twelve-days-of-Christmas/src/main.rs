@@ -13,8 +13,14 @@ fn main() {
     let eleven = "Eleven pipers piping,";
     let twelve = "Twelve drummers drumming,";
 
+    //Days array
+    let a = [format!("{} {}", { two }, { one })];
+    for line in &a {
+        println!("{}", line);
+    }
     //"index" is the index number for "day"
     let mut index: u32 = 0;
+
     loop {
         index += 1;
 
@@ -25,8 +31,6 @@ fn main() {
         if index == 12 {
             let one = "And a partridge in a pear tree!";
         }
-
-        println!("")
     }
 }
 
