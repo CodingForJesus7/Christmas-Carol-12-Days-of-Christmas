@@ -39,12 +39,12 @@ fn main() {
         } else if index > 0 {
             "And a partridge in a pear tree."
         } else {
-            "a partridge in a pear tree."
+            "A partridge in a pear tree."
         };
 
         let output = match index {
-            0 => format!("{} {} {} {}", begin_fst, first, begin_lst, one),
-            1 => format!("{} {} {} {} {}", begin_fst, second, begin_lst, two, one),
+            0 => format!("{} {} {}\n{}", begin_fst, first, begin_lst, one),
+            1 => format!("{} {} {}\n{}\n{}", begin_fst, second, begin_lst, two, one),
 
             _ => format!("e"),
         };
