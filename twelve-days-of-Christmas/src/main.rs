@@ -49,11 +49,13 @@ fn main() {
             _ => format!("e"),
         };
 
-        if index < 12 {
-            println!("{}", output);
-        }
+        println!("{}", output);
 
         index += 1;
+
+        if index > 11 {
+            break;
+        }
     };
 }
 
