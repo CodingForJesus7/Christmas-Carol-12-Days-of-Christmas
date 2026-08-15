@@ -44,16 +44,20 @@ fn main() {
 
         let output = match index {
             0 => format!("{} {} {} {}", begin_fst, first, begin_lst, one),
+            1 => format!("{} {} {} {} {}", begin_fst, second, begin_lst, two, one),
+
             _ => format!("e"),
         };
 
-        if index == 0 {
+        if index < 12 {
             println!("{}", output);
         }
 
         index += 1;
     };
 }
+
+//note to self: learn how to add "new line" for each sentence (e.g. one{new_line}two{new_line}three
 
 //Link to Claude chat:
 //https://claude.ai/share/aad00822-3c65-4f66-8f9b-17a4ca99970e
