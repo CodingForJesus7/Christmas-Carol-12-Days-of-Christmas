@@ -45,6 +45,85 @@ fn main() {
         let output = match index {
             0 => format!("{} {} {}\n{}", begin_fst, first, begin_lst, one),
             1 => format!("{} {} {}\n{}\n{}", begin_fst, second, begin_lst, two, one),
+            2 => format!(
+                "{} {} {}\n{}\n{}\n{}",
+                begin_fst, third, begin_lst, three, two, one
+            ),
+            3 => format!(
+                "{} {} {}\n{}\n{}\n{}\n{}",
+                begin_fst, fourth, begin_lst, four, three, two, one
+            ),
+            4 => format!(
+                "{} {} {}\n{}\n{}\n{}\n{}\n{}",
+                begin_fst, fifth, begin_lst, five, four, three, two, one
+            ),
+            5 => format!(
+                "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}",
+                begin_fst, sixth, begin_lst, six, five, four, three, two, one
+            ),
+            6 => format!(
+                "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}\n{}",
+                begin_fst, seventh, begin_lst, seven, six, five, four, three, two, one
+            ),
+            7 => format!(
+                "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}",
+                begin_fst, eighth, begin_lst, eight, seven, six, five, four, three, two, one
+            ),
+            8 => format!(
+                "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}",
+                begin_fst, nineth, begin_lst, nine, eight, seven, six, five, four, three, two, one
+            ),
+            9 => format!(
+                "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}",
+                begin_fst,
+                tenth,
+                begin_lst,
+                ten,
+                nine,
+                eight,
+                seven,
+                six,
+                five,
+                four,
+                three,
+                two,
+                one
+            ),
+            10 => format!(
+                "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}",
+                begin_fst,
+                eleventh,
+                begin_lst,
+                eleven,
+                ten,
+                nine,
+                eight,
+                seven,
+                six,
+                five,
+                four,
+                three,
+                two,
+                one
+            ),
+            11 => format!(
+                "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}",
+                begin_fst,
+                twelfth,
+                begin_lst,
+                twelve,
+                eleven,
+                ten,
+                nine,
+                eight,
+                seven,
+                six,
+                five,
+                four,
+                three,
+                two,
+                one
+            ),
 
             _ => format!("e"),
         };
