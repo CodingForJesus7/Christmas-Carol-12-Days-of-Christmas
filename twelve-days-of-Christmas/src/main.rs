@@ -42,12 +42,18 @@ fn main() {
             "a partridge in a pear tree."
         };
 
+        let output = match index {
+            0 => format!("{} {} {} {}", begin_fst, first, begin_lst, one),
+            _ => format!("e"),
+        };
+
+        if index == 0 {
+            println!("{}", output);
+        }
+
         index += 1;
     };
 }
-
-//note to self: learn how to add "new line" for each sentence (e.g. one{new_line}two{new_line}three
-//and so on)
 
 //Link to Claude chat:
 //https://claude.ai/share/aad00822-3c65-4f66-8f9b-17a4ca99970e
