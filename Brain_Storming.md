@@ -11,3 +11,13 @@
 	•	Have the program start with a prompt that says something like “Press enter to start the 12 days of Christmas”
 	•	After outputting a day, give prompt to user to “press ‘s’ to sleep and go to next day”Carol brainstorm
 
+## User Interaction
+
+### Start
+* Welcome to the 12 days of Christmas!
+* Press 'Enter' to begin
+
+### The days
+* Start of first day output
+* Press 's' to sleep and continue to next day
+* At 12th day, press 'q' to quit

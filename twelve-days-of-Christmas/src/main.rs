@@ -1,3 +1,4 @@
+use std::io;
 fn main() {
     //List of 12 days
     let two = "Two turtle doves,";
@@ -32,6 +33,10 @@ fn main() {
 
     //"index" is the index number for "day"
     let mut index: usize = 0;
+
+    let mut input = String::new();
+
+    io::stdin().read_line().expect("Failed to read line.");
 
     let days = loop {
         let one = if index == 11 {
