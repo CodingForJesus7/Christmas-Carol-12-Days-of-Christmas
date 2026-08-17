@@ -36,7 +36,9 @@ fn main() {
 
     let mut input = String::new();
 
-    io::stdin().read_line().expect("Failed to read line.");
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Failed to read line.");
 
     let days = loop {
         let one = if index == 11 {
@@ -135,15 +137,17 @@ fn main() {
 
         println!("{}", output);
 
-        index += 1;
+        println!("Press 's' to sleep and proceed to the next day.");
+
+        if input == "s" {
+            index += 1;
+        }
 
         if index > 11 {
             break;
         }
     };
 }
-
-//note to self: learn how to add "new line" for each sentence (e.g. one{new_line}two{new_line}three
 
 //Link to Claude chat:
 //https://claude.ai/share/aad00822-3c65-4f66-8f9b-17a4ca99970e
