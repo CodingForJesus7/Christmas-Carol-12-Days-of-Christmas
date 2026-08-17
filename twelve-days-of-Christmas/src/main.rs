@@ -61,11 +61,34 @@ fn main() {
                     format!("{} {} {}\n{}", begin_fst, first, begin_lst, one)
                 );
 
+                println!("Enter 's' to proceed to the next day.");
+
                 counter += 1;
 
                 continue;
             };
         } else {
+            let mut input = String::new();
+
+            io::stdin()
+                .read_line(&mut input)
+                .expect("Failed to read line.");
+
+            let input = input.trim();
+
+            match input {
+                "s" => println!("YOU DID IT!!"),
+                "q" => break,
+                _ => {
+                    println!("Please enter 's' to sleep into the next day or enter 'q' to quit.");
+                }
+            }
+
+            counter += 1;
+
+            if counter == 5 {
+                break;
+            }
         }
     }
 }
