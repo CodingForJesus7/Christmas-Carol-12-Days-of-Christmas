@@ -61,7 +61,9 @@ fn main() {
                     format!("{} {} {}\n{}", begin_fst, first, begin_lst, one)
                 );
 
-                println!("Enter 's' to proceed to the next day.");
+                println!("Enter 's' to sleep into the next day,");
+                println!("or enter 'q' to quit.");
+                println!("You can enter 'q' to quit at anytime.");
 
                 counter += 1;
 
