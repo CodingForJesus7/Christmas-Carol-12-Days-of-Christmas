@@ -34,6 +34,8 @@ fn main() {
     let twelfth = "twelfth";
 
     //Introduction loop
+    let mut index = 0;
+
     loop {
         if counter == 0 {
             println!("Welcome to The 12 Days of Christmas!");
@@ -77,8 +79,6 @@ fn main() {
                 .expect("Failed to read line.");
 
             let input = input.trim();
-
-            let mut index = 0;
 
             match input {
                 "s" => {
@@ -198,6 +198,8 @@ fn main() {
             };
 
             println!("{}", output);
+
+            println!("Enter 's' to sleep into the next day");
 
             if index == 12 {
                 println!("You made it through all the days!");
