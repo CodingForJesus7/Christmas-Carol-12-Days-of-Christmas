@@ -76,18 +76,152 @@ fn main() {
 
             let input = input.trim();
 
+            let mut index = 0;
+
             match input {
-                "s" => println!("YOU DID IT!!"),
+                "s" => {
+                    println!("");
+                    index += 1;
+                }
                 "q" => break,
                 _ => {
                     println!("Please enter 's' to sleep into the next day or enter 'q' to quit.");
+                    continue;
                 }
             }
 
-            counter += 1;
+            let one = if index == 11 {
+                "And a partridge in a pear tree!"
+            } else if counter > 0 {
+                "And a partridge in a pear tree."
+            } else {
+                "A partridge in a pear tree."
+            };
 
-            if counter == 5 {
-                break;
+            let output = match index {
+                0 => format!("{} {} {}\n{}", begin_fst, first, begin_lst, one),
+                1 => format!("{} {} {}\n{}\n{}", begin_fst, second, begin_lst, two, one),
+                2 => format!(
+                    "{} {} {}\n{}\n{}\n{}",
+                    begin_fst, third, begin_lst, three, two, one
+                ),
+                3 => format!(
+                    "{} {} {}\n{}\n{}\n{}\n{}",
+                    begin_fst, fourth, begin_lst, four, three, two, one
+                ),
+                4 => format!(
+                    "{} {} {}\n{}\n{}\n{}\n{}\n{}",
+                    begin_fst, fifth, begin_lst, five, four, three, two, one
+                ),
+                5 => format!(
+                    "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}",
+                    begin_fst, sixth, begin_lst, six, five, four, three, two, one
+                ),
+                6 => format!(
+                    "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}\n{}",
+                    begin_fst, seventh, begin_lst, seven, six, five, four, three, two, one
+                ),
+                7 => format!(
+                    "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}",
+                    begin_fst, eighth, begin_lst, eight, seven, six, five, four, three, two, one
+                ),
+                8 => format!(
+                    "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}",
+                    begin_fst,
+                    nineth,
+                    begin_lst,
+                    nine,
+                    eight,
+                    seven,
+                    six,
+                    five,
+                    four,
+                    three,
+                    two,
+                    one
+                ),
+                9 => format!(
+                    "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}",
+                    begin_fst,
+                    tenth,
+                    begin_lst,
+                    ten,
+                    nine,
+                    eight,
+                    seven,
+                    six,
+                    five,
+                    four,
+                    three,
+                    two,
+                    one
+                ),
+                10 => format!(
+                    "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}",
+                    begin_fst,
+                    eleventh,
+                    begin_lst,
+                    eleven,
+                    ten,
+                    nine,
+                    eight,
+                    seven,
+                    six,
+                    five,
+                    four,
+                    three,
+                    two,
+                    one
+                ),
+                11 => format!(
+                    "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}",
+                    begin_fst,
+                    twelfth,
+                    begin_lst,
+                    twelve,
+                    eleven,
+                    ten,
+                    nine,
+                    eight,
+                    seven,
+                    six,
+                    five,
+                    four,
+                    three,
+                    two,
+                    one
+                ),
+
+                _ => format!("e"),
+            };
+
+            println!("{}", output);
+
+            if index == 12 {
+                println!("You made it through all the days!");
+                println!("You can enter 'q' to quit,");
+                println!("or you can restart by entering 'r'.");
+
+                loop {
+                    let mut input = String::new();
+
+                    io::stdin()
+                        .read_line(&mut input)
+                        .expect("Failed to read line.");
+
+                    let input = input.trim();
+
+                    match input {
+                        "r" => counter = 0,
+                        "q" => break,
+                        _ => {
+                            println!("Invalid input.");
+                            println!("Enter 'q' to quit,");
+                            println!("or enter 'r' to restart");
+                            continue;
+                        }
+                    }
+                }
             }
         }
     }
