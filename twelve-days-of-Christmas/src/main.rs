@@ -31,8 +31,10 @@ fn main() {
     let eleventh = "eleventh";
     let twelfth = "twelfth";
 
-    //Introduction loop
+    //12th day text
+    let twelfth_day = "Press 'Enter' to continue.";
 
+    //Introduction loop
     'restart: loop {
         let mut index = 0;
         let mut counter = 0;
@@ -83,10 +85,17 @@ fn main() {
 
                 match input {
                     "s" => {
-                        println!("");
-                        index += 1;
+                        if index < 11 {
+                            println!("");
+                            index += 1;
+                        }
                     }
                     "q" => break,
+                    "" => {
+                        if index > 11 {
+                            println!("");
+                        }
+                    }
                     _ => {
                         println!(
                             "Please enter 's' to sleep into the next day or enter 'q' to quit."
@@ -189,7 +198,7 @@ fn main() {
                         one
                     ),
                     11 => format!(
-                        "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}",
+                        "{} {} {}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}",
                         begin_fst,
                         twelfth,
                         begin_lst,
@@ -204,10 +213,17 @@ fn main() {
                         four,
                         three,
                         two,
-                        one
+                        one,
+                        twelfth_day
                     ),
 
-                    _ => format!("e"),
+                    _ => {
+                        if index < 11 {
+                            format!("e")
+                        } else {
+                            format!("")
+                        }
+                    }
                 };
 
                 println!("{}", output);
@@ -216,11 +232,12 @@ fn main() {
                     println!("Enter 's' to sleep into the next day");
                 }
 
-                if index == 12 {
+                if index > 11 {
                     println!("You made it through all the days!");
                     println!("You can enter 'q' to quit,");
                     println!("or you can restart by entering 'r'.");
 
+                    //Restart loop
                     loop {
                         let mut input = String::new();
 
@@ -241,6 +258,10 @@ fn main() {
                             }
                         }
                     }
+                }
+
+                if index > 10 {
+                    index += 1;
                 }
             }
         }
