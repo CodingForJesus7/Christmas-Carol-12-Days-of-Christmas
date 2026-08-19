@@ -6,3 +6,6 @@ To output the lyrics of the carol onto the user's terminal while taking advantag
 
 # TO DO:
 Add sleep and quit println's to each day, as well as adding 1 to index each day.
+
+# Issues:
+* After entering 'r' to restart, entering 'q' to quit doesn't break the loop.
