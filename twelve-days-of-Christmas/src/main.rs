@@ -90,7 +90,7 @@ fn main() {
                             index += 1;
                         }
                     }
-                    "q" => break,
+                    "q" => break 'restart,
                     "" => {
                         if index > 11 {
                             println!("");
@@ -237,7 +237,7 @@ fn main() {
                     println!("You can enter 'q' to quit,");
                     println!("or you can restart by entering 'r'.");
 
-                    //Restart loop
+                    //Ending loop
                     loop {
                         let mut input = String::new();
 
@@ -249,7 +249,7 @@ fn main() {
 
                         match input {
                             "r" => continue 'restart,
-                            "q" => break,
+                            "q" => break 'restart,
                             _ => {
                                 println!("Invalid input.");
                                 println!("Enter 'q' to quit,");
