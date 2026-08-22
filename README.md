@@ -2,10 +2,6 @@
 
 ## Purpose of repo
 
-To output the lyrics of the carol onto the user's terminal while taking advantage of the repetition in the song in my code1.
+To output the lyrics of the carol onto the user's terminal while taking advantage of the repetition in the song in my code.
 
-## TO DO:
-* Have entering 'r' to restart and entering 'q' to quit to be fully functional to my liking
-
-## Issues:
-* After entering 'r' to restart, entering 'q' to quit doesn't break the loop.
+I also added user interaction to make it more fun.
