@@ -270,5 +270,3 @@ fn main() {
 
 //Link to Claude chat:
 //https://claude.ai/share/aad00822-3c65-4f66-8f9b-17a4ca99970e
-
-// Issue: The 12th day still expects you to enter 's' to proceed
